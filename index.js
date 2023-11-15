@@ -48,6 +48,7 @@ const limiter = rateLimit({
     'Number of request limit per hour is excessed! Please try after 1 hour',
 });
 
+//Used to limit number of requests to server
 app.use('/api', limiter);
 
 app.use(cors());
