@@ -222,7 +222,7 @@ exports.passwordUpdate = catchAsync(async (req, res, next) => {
   //3. If so, update the password
   user.password = req.body.password;
   user.passwordConfirm = req.body.passwordConfirm;
-  console.log(
+  //console.log(
     '-------------------',
     req.body.password,
     req.body.passwordConfirm

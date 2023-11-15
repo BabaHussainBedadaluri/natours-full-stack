@@ -127,7 +127,7 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 // tourSchema.post('save', function (doc, next) {
-//   console.log(doc);
+//   //console.log(doc);
 //   next();
 // });
 tourSchema.virtual('durationWeek').get(function () {
@@ -141,7 +141,7 @@ tourSchema.virtual('reviews', {
 });
 // tourSchema.pre('aggregate', function (next) {
 //   this.pipeline().unshift({ $match: { secreteTour: { $ne: true } } });
-//   console.log(this.pipeline());
+//   //console.log(this.pipeline());
 //   next();
 // });
 

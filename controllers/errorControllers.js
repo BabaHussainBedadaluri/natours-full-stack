@@ -62,7 +62,7 @@ const sendErrDevlopment = (err, req, res) => {
   }
 };
 const sendErrProduction = (err, req, res) => {
-  // console.log(err);
+  // //console.log(err);
   if (err.isOperational) {
     if (req.originalUrl.startsWith('/api')) {
       res.status(err.statusCode).json({

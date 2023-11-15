@@ -45,7 +45,7 @@ if (formUserElement) {
     // const name = document.getElementById('name').value;
     // const email = document.getElementById('email').value;
     // const photo = document.getElementById('photo').files[0];
-    // console.log(form);
+    // //console.log(form);
     updateUser(form, 'data');
   });
 }

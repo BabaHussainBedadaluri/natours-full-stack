@@ -16,6 +16,7 @@ const reviewRouter = require('./routes/reviewRoute');
 const globalError = require('./controllers/errorControllers');
 const AppErr = require('./utils/errorHandle');
 const app = express();
+const compression = require('compression');
 
 //set view engine for server side rendering
 
@@ -39,6 +40,11 @@ app.use(
     },
   })
 );
+
+// for compressing text files to client
+
+app.use(compression());
+
 //2. Request rate limiter
 
 const limiter = rateLimit({

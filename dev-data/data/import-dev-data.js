@@ -4,7 +4,7 @@ const Tour = require('./../../model/tourModel');
 const User = require('./../../model/userModel');
 const Review = require('./../../model/reviewModel');
 const dotenv = require('dotenv');
-// console.log(process.env);
+// //console.log(process.env);
 
 dotenv.config({ path: './config.env' });
 
@@ -16,11 +16,11 @@ mongoose
     useUnifiedTopology: true,
   })
   .then((con) => {
-    console.log('Db connection successful');
+    //console.log('Db connection successful');
   });
 
 process.on('unhandledRejection', (err) => {
-  console.log(err.message);
+  //console.log(err.message);
   process.exit(1);
 });
 
@@ -35,9 +35,9 @@ const importData = async () => {
     await Tour.create(tours);
     await User.create(users, { validateBeforeSave: false });
     await Review.create(reviews);
-    console.log('data loaded successfully');
+    //console.log('data loaded successfully');
   } catch (err) {
-    console.log(err);
+    //console.log(err);
   }
   process.exit();
 };
@@ -48,7 +48,7 @@ const deleteData = async () => {
     await Review.deleteMany();
     console.log('data deleted successfully');
   } catch (err) {
-    console.log(err);
+    //console.log(err);
   }
   process.exit();
 };
