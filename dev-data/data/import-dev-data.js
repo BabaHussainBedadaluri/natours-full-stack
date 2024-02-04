@@ -16,7 +16,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then((con) => {
-    //console.log('Db connection successful');
+    console.log('Db connection successful');
   });
 
 process.on('unhandledRejection', (err) => {
