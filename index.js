@@ -59,6 +59,8 @@ app.use('/api', limiter);
 
 app.use(cors());
 
+app.options('*', cors());
+
 // Reading data in body into req.body
 
 app.use(express.json({ limit: '10kb' }));
