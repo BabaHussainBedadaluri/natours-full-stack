@@ -4,6 +4,7 @@ const Tour = require('./../../model/tourModel');
 const User = require('./../../model/userModel');
 const Review = require('./../../model/reviewModel');
 const dotenv = require('dotenv');
+const server = require('./../../server');
 // //console.log(process.env);
 
 dotenv.config({ path: './config.env' });
@@ -20,8 +21,18 @@ mongoose
   });
 
 process.on('unhandledRejection', (err) => {
-  //console.log(err.message);
-  process.exit(1);
+  console.log(err.name, err.message);
+  console.log('💥 faced unhandledRejection');
+  server.close(() => {
+    process.exit(1);
+  });
+});
+
+process.on('SIGTERM', () => {
+  console.log(' received SIGTERM command:- restarting the application');
+  server.close(() => {
+    console.log('process terminated');
+  });
 });
 
 const tours = JSON.parse(fs.readFileSync(`${__dirname}/tours.json`, 'utf-8'));
