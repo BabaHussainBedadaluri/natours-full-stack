@@ -32,7 +32,7 @@ export const logout = async () => {
       location.assign('/');
     }
   } catch (err) {
-    //console.log('catch block');
+    console.log(err.message);
     showAlert('error', 'failed to logout');
   }
 };
