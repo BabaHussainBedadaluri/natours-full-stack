@@ -12,6 +12,7 @@ const rateLimit = require('express-rate-limit');
 const userRouter = require('./routes/userRoute');
 const tourRouter = require('./routes/tourRoute');
 const booking = require('./routes/bookingRoute');
+const webhookCheckout = require('./controllers/bookingController');
 const reviewRouter = require('./routes/reviewRoute');
 const globalError = require('./controllers/errorControllers');
 const AppErr = require('./utils/errorHandle');
@@ -60,6 +61,12 @@ app.use('/api', limiter);
 app.use(cors());
 
 app.options('*', cors());
+
+app.post(
+  'webhook-checkout',
+  express.raw({ type: 'application/json' }),
+  webhookCheckout
+);
 
 // Reading data in body into req.body
 

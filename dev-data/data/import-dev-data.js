@@ -4,7 +4,7 @@ const Tour = require('./../../model/tourModel');
 const User = require('./../../model/userModel');
 const Review = require('./../../model/reviewModel');
 const dotenv = require('dotenv');
-const server = require('./../../server');
+const { server } = require('./../../server');
 // //console.log(process.env);
 
 dotenv.config({ path: './config.env' });
