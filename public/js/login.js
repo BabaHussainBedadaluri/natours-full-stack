@@ -21,19 +21,19 @@ export const login = async (email, password) => {
   }
 };
 
-export const logout = async () => {
-  try {
-    const result = await axios({
-      method: 'GET',
-      url: '/api/v1/users/logout',
-    });
-    if (result.data.status == 'success') {
-      // location.reload(true);
-      // location.assign('/');
-      console.log('run');
-    }
-  } catch (err) {
-    console.log(err.message);
-    // showAlert('error', 'failed to logout -------');
-  }
-};
+// export const logout = async () => {
+//   try {
+//     const result = await axios({
+//       method: 'GET',
+//       url: '/api/v1/users/logout',
+//     });
+//     if (result.data.status == 'success') {
+//       // location.reload(true);
+//       // location.assign('/');
+//       console.log('run');
+//     }
+//   } catch (err) {
+//     console.log(err.message);
+//     // showAlert('error', 'failed to logout -------');
+//   }
+// };
