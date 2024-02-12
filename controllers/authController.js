@@ -17,9 +17,7 @@ function createTokenAndSendResponse(user, statusCode, res) {
   const token = webToken(user._id);
   const cookieOptions = {
     httpOnly: true,
-    expires: new Date(
-      Date.now() + process.env.COOKIE_JWT_EXPIRES_IN * 24 * 60 * 60 * 1000
-    ),
+    expires: new Date(Date.now() + process.env.COOKIE_JWT_EXPIRES_IN),
   };
   if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
   user.password = undefined;
