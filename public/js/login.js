@@ -28,8 +28,9 @@ export const logout = async () => {
       url: 'https://natours-79sq.onrender.com/api/v1/users/logout',
     });
     if (result.data.status == 'success') {
-      location.reload(true);
+      // location.reload(true);
       location.assign('/');
+      console.log('run');
     }
   } catch (err) {
     console.log(err.message);
