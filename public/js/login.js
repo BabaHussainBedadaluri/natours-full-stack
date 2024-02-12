@@ -29,7 +29,7 @@ export const logout = async () => {
     });
     if (result.data.status == 'success') {
       // location.reload(true);
-      location.assign('/');
+      // location.assign('/');
       console.log('run');
     }
   } catch (err) {
