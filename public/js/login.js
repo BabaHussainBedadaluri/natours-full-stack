@@ -25,7 +25,7 @@ export const logout = async () => {
   try {
     const result = await axios({
       method: 'GET',
-      url: 'https://natours-79sq.onrender.com/api/v1/users/logout',
+      url: '/api/v1/users/logout',
     });
     if (result.data.status == 'success') {
       // location.reload(true);
