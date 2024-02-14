@@ -22,6 +22,7 @@ export const login = async (email, password) => {
 };
 
 export const logout = async () => {
+  console.log('run logout in login.js file');
   try {
     const result = await axios({
       method: 'GET',
