@@ -30,7 +30,7 @@ export const logout = async () => {
     if (result.data.status == 'success') {
       // location.reload(true);
       // location.assign('/');
-      console.log('run');
+      console.log('run logout in login.js file');
     }
   } catch (err) {
     console.log(err.message);
