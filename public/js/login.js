@@ -26,7 +26,7 @@ export const logout = async () => {
   try {
     const result = await axios({
       method: 'GET',
-      url: '/api/v1/users/logout/asdkgsahk',
+      url: '/api/v1/users/logout/asdkgsahks',
     });
     if (result.data.status == 'success') {
       // location.reload(true);
