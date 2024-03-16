@@ -82,7 +82,7 @@ const sendErrProduction = (err, req, res) => {
       console.log(err);
       res.status(500).json({
         status: 'error',
-        message: err.message,
+        message: err,
       });
     } else {
       res.status(err.statusCode).render('error', {
