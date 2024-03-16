@@ -6,7 +6,7 @@ const Email = require('../utils/email');
 const { promisify } = require('util');
 const crypto = require('crypto');
 const bcrypt = require('bcryptjs');
-// hi baba
+// hi baba hussain
 function webToken(id) {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: process.env.EXPIRES_IN,
