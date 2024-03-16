@@ -2,6 +2,9 @@ const catchAsync = require('../utils/catchAsync');
 const Tour = require('../model/tourModel');
 const User = require('../model/userModel');
 const Booking = require('../model/bookingModel');
+const stripe = require('stripe') (
+  'sk_test_51Nbgy6SCjrh5PRdF2oD1XlTpAaxtDFgYepIqq0jIQmJ0muZ3UIbIzjclhXVpC1xIEUw8mVZ8lo6Tlwp3mGLTxMC0008FbnITJi'
+);
 
 const {
   deleteOne,
@@ -10,9 +13,6 @@ const {
   getAll,
 } = require('../controllers/factoryFunctions');
 
-const stripe = require('stripe')(
-  'sk_test_51Nbgy6SCjrh5PRdF2oD1XlTpAaxtDFgYepIqq0jIQmJ0muZ3UIbIzjclhXVpC1xIEUw8mVZ8lo6Tlwp3mGLTxMC0008FbnITJi'
-);
 
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 1.Get the currently booked tour
