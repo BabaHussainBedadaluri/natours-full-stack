@@ -81,7 +81,7 @@ const sendErrProduction = (err, req, res) => {
     if (req.originalUrl.startsWith('/api')) {
       res.status(500).json({
         status: 'error',
-        message: 'something went wrong',
+        message: err.message,
       });
     } else {
       res.status(err.statusCode).render('error', {
