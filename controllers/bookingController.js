@@ -2,7 +2,7 @@ const catchAsync = require('../utils/catchAsync');
 const Tour = require('../model/tourModel');
 const User = require('../model/userModel');
 const Booking = require('../model/bookingModel');
-const stripe = require('stripe');
+
 const {
   deleteOne,
   updateOne,
