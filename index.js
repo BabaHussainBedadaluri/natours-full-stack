@@ -12,11 +12,7 @@ const rateLimit = require('express-rate-limit');
 const userRouter = require('./routes/userRoute');
 const tourRouter = require('./routes/tourRoute');
 const booking = require('./routes/bookingRoute');
-<<<<<<< HEAD
 const { webhookCheckout } = require('./controllers/bookingController');
-=======
-const {webhookCheckout} = require('./controllers/bookingController');
->>>>>>> 967967b899092a128005ef729dfe8ae90b901493
 const reviewRouter = require('./routes/reviewRoute');
 const globalError = require('./controllers/errorControllers');
 const AppErr = require('./utils/errorHandle');
