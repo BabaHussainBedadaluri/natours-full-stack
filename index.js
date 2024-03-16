@@ -63,7 +63,7 @@ app.use(cors());
 app.options('*', cors());
 
 app.post(
-  'webhook-checkout',
+  '/webhook-checkout',
   express.raw({ type: 'application/json' }),
   webhookCheckout
 );
