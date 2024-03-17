@@ -11,7 +11,7 @@ export const login = async (email, password) => {
       },
     });
     if (result.data.status === 'success') {
-      showAlert('success', 'logged in successfully baba----');
+      showAlert('success', 'logged in successfully');
       window.setTimeout(() => {
         location.assign('/');
       }, 1500);
@@ -22,19 +22,15 @@ export const login = async (email, password) => {
 };
 
 export const logout = async () => {
-  console.log('run logout in login.js file');
   try {
     const result = await axios({
       method: 'GET',
-      url: '/api/v1/users/logout/asdkgsahks',
+      url: '/api/v1/users/logout',
     });
     if (result.data.status == 'success') {
-      // location.reload(true);
-      // location.assign('/');
-      console.log('run logout in login.js file');
+      location.reload(true);
     }
   } catch (err) {
-    console.log(err.message);
-    // showAlert('error', 'failed to logout -------');
+    showAlert('error', 'Failed to logout, Try again');
   }
 };
